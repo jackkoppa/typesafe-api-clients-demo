@@ -219,11 +219,11 @@ export const BasicErrorControllerApiAxiosParamCreator = function (configuration?
     return {
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingDELETE(options: any = {}): RequestArgs {
+        errorUsingDELETE(options: any = {}): RequestArgs {
             const localVarPath = `/error`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -248,11 +248,11 @@ export const BasicErrorControllerApiAxiosParamCreator = function (configuration?
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingGET(options: any = {}): RequestArgs {
+        errorUsingGET(options: any = {}): RequestArgs {
             const localVarPath = `/error`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -277,11 +277,11 @@ export const BasicErrorControllerApiAxiosParamCreator = function (configuration?
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingHEAD(options: any = {}): RequestArgs {
+        errorUsingHEAD(options: any = {}): RequestArgs {
             const localVarPath = `/error`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -306,11 +306,11 @@ export const BasicErrorControllerApiAxiosParamCreator = function (configuration?
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingOPTIONS(options: any = {}): RequestArgs {
+        errorUsingOPTIONS(options: any = {}): RequestArgs {
             const localVarPath = `/error`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -335,11 +335,11 @@ export const BasicErrorControllerApiAxiosParamCreator = function (configuration?
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingPATCH(options: any = {}): RequestArgs {
+        errorUsingPATCH(options: any = {}): RequestArgs {
             const localVarPath = `/error`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -364,11 +364,11 @@ export const BasicErrorControllerApiAxiosParamCreator = function (configuration?
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingPOST(options: any = {}): RequestArgs {
+        errorUsingPOST(options: any = {}): RequestArgs {
             const localVarPath = `/error`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -393,11 +393,11 @@ export const BasicErrorControllerApiAxiosParamCreator = function (configuration?
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingPUT(options: any = {}): RequestArgs {
+        errorUsingPUT(options: any = {}): RequestArgs {
             const localVarPath = `/error`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -431,12 +431,12 @@ export const BasicErrorControllerApiFp = function(configuration?: Configuration)
     return {
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingDELETE(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ModelAndView> {
-            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorHtmlUsingDELETE(options);
+        errorUsingDELETE(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: object; }> {
+            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorUsingDELETE(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -444,12 +444,12 @@ export const BasicErrorControllerApiFp = function(configuration?: Configuration)
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingGET(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ModelAndView> {
-            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorHtmlUsingGET(options);
+        errorUsingGET(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: object; }> {
+            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorUsingGET(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -457,12 +457,12 @@ export const BasicErrorControllerApiFp = function(configuration?: Configuration)
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingHEAD(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ModelAndView> {
-            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorHtmlUsingHEAD(options);
+        errorUsingHEAD(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: object; }> {
+            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorUsingHEAD(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -470,12 +470,12 @@ export const BasicErrorControllerApiFp = function(configuration?: Configuration)
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingOPTIONS(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ModelAndView> {
-            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorHtmlUsingOPTIONS(options);
+        errorUsingOPTIONS(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: object; }> {
+            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorUsingOPTIONS(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -483,12 +483,12 @@ export const BasicErrorControllerApiFp = function(configuration?: Configuration)
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingPATCH(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ModelAndView> {
-            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorHtmlUsingPATCH(options);
+        errorUsingPATCH(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: object; }> {
+            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorUsingPATCH(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -496,12 +496,12 @@ export const BasicErrorControllerApiFp = function(configuration?: Configuration)
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingPOST(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ModelAndView> {
-            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorHtmlUsingPOST(options);
+        errorUsingPOST(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: object; }> {
+            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorUsingPOST(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -509,12 +509,12 @@ export const BasicErrorControllerApiFp = function(configuration?: Configuration)
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingPUT(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ModelAndView> {
-            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorHtmlUsingPUT(options);
+        errorUsingPUT(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: object; }> {
+            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorUsingPUT(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -531,66 +531,66 @@ export const BasicErrorControllerApiFactory = function (configuration?: Configur
     return {
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingDELETE(options?: any) {
-            return BasicErrorControllerApiFp(configuration).errorHtmlUsingDELETE(options)(axios, basePath);
+        errorUsingDELETE(options?: any) {
+            return BasicErrorControllerApiFp(configuration).errorUsingDELETE(options)(axios, basePath);
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingGET(options?: any) {
-            return BasicErrorControllerApiFp(configuration).errorHtmlUsingGET(options)(axios, basePath);
+        errorUsingGET(options?: any) {
+            return BasicErrorControllerApiFp(configuration).errorUsingGET(options)(axios, basePath);
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingHEAD(options?: any) {
-            return BasicErrorControllerApiFp(configuration).errorHtmlUsingHEAD(options)(axios, basePath);
+        errorUsingHEAD(options?: any) {
+            return BasicErrorControllerApiFp(configuration).errorUsingHEAD(options)(axios, basePath);
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingOPTIONS(options?: any) {
-            return BasicErrorControllerApiFp(configuration).errorHtmlUsingOPTIONS(options)(axios, basePath);
+        errorUsingOPTIONS(options?: any) {
+            return BasicErrorControllerApiFp(configuration).errorUsingOPTIONS(options)(axios, basePath);
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingPATCH(options?: any) {
-            return BasicErrorControllerApiFp(configuration).errorHtmlUsingPATCH(options)(axios, basePath);
+        errorUsingPATCH(options?: any) {
+            return BasicErrorControllerApiFp(configuration).errorUsingPATCH(options)(axios, basePath);
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingPOST(options?: any) {
-            return BasicErrorControllerApiFp(configuration).errorHtmlUsingPOST(options)(axios, basePath);
+        errorUsingPOST(options?: any) {
+            return BasicErrorControllerApiFp(configuration).errorUsingPOST(options)(axios, basePath);
         },
         /**
          * 
-         * @summary errorHtml
+         * @summary error
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorHtmlUsingPUT(options?: any) {
-            return BasicErrorControllerApiFp(configuration).errorHtmlUsingPUT(options)(axios, basePath);
+        errorUsingPUT(options?: any) {
+            return BasicErrorControllerApiFp(configuration).errorUsingPUT(options)(axios, basePath);
         },
     };
 };
@@ -604,79 +604,79 @@ export const BasicErrorControllerApiFactory = function (configuration?: Configur
 export class BasicErrorControllerApi extends BaseAPI {
     /**
      * 
-     * @summary errorHtml
+     * @summary error
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BasicErrorControllerApi
      */
-    public errorHtmlUsingDELETE(options?: any) {
-        return BasicErrorControllerApiFp(this.configuration).errorHtmlUsingDELETE(options)(this.axios, this.basePath);
+    public errorUsingDELETE(options?: any) {
+        return BasicErrorControllerApiFp(this.configuration).errorUsingDELETE(options)(this.axios, this.basePath);
     }
 
     /**
      * 
-     * @summary errorHtml
+     * @summary error
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BasicErrorControllerApi
      */
-    public errorHtmlUsingGET(options?: any) {
-        return BasicErrorControllerApiFp(this.configuration).errorHtmlUsingGET(options)(this.axios, this.basePath);
+    public errorUsingGET(options?: any) {
+        return BasicErrorControllerApiFp(this.configuration).errorUsingGET(options)(this.axios, this.basePath);
     }
 
     /**
      * 
-     * @summary errorHtml
+     * @summary error
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BasicErrorControllerApi
      */
-    public errorHtmlUsingHEAD(options?: any) {
-        return BasicErrorControllerApiFp(this.configuration).errorHtmlUsingHEAD(options)(this.axios, this.basePath);
+    public errorUsingHEAD(options?: any) {
+        return BasicErrorControllerApiFp(this.configuration).errorUsingHEAD(options)(this.axios, this.basePath);
     }
 
     /**
      * 
-     * @summary errorHtml
+     * @summary error
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BasicErrorControllerApi
      */
-    public errorHtmlUsingOPTIONS(options?: any) {
-        return BasicErrorControllerApiFp(this.configuration).errorHtmlUsingOPTIONS(options)(this.axios, this.basePath);
+    public errorUsingOPTIONS(options?: any) {
+        return BasicErrorControllerApiFp(this.configuration).errorUsingOPTIONS(options)(this.axios, this.basePath);
     }
 
     /**
      * 
-     * @summary errorHtml
+     * @summary error
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BasicErrorControllerApi
      */
-    public errorHtmlUsingPATCH(options?: any) {
-        return BasicErrorControllerApiFp(this.configuration).errorHtmlUsingPATCH(options)(this.axios, this.basePath);
+    public errorUsingPATCH(options?: any) {
+        return BasicErrorControllerApiFp(this.configuration).errorUsingPATCH(options)(this.axios, this.basePath);
     }
 
     /**
      * 
-     * @summary errorHtml
+     * @summary error
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BasicErrorControllerApi
      */
-    public errorHtmlUsingPOST(options?: any) {
-        return BasicErrorControllerApiFp(this.configuration).errorHtmlUsingPOST(options)(this.axios, this.basePath);
+    public errorUsingPOST(options?: any) {
+        return BasicErrorControllerApiFp(this.configuration).errorUsingPOST(options)(this.axios, this.basePath);
     }
 
     /**
      * 
-     * @summary errorHtml
+     * @summary error
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BasicErrorControllerApi
      */
-    public errorHtmlUsingPUT(options?: any) {
-        return BasicErrorControllerApiFp(this.configuration).errorHtmlUsingPUT(options)(this.axios, this.basePath);
+    public errorUsingPUT(options?: any) {
+        return BasicErrorControllerApiFp(this.configuration).errorUsingPUT(options)(this.axios, this.basePath);
     }
 
 }
