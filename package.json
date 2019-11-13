@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "generate-api-clients": "node ./src/api/generateApiClients.js",
-    "deploy": "npm run build && gh-pages -d dist --repo=https://${GITHUB_API_TOKEN}@github.com/jackkoppa/typesafe-api-clients-demo.git --silent"
+    "deploy": "npm run build && gh-pages -d dist --repo=https://${GITHUB_API_TOKEN}@github.com/jackkoppa/typesafe-api-clients-demo.git"
   },
   "dependencies": {
     "core-js": "^3.3.2",
