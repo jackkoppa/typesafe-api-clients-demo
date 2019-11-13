@@ -105,10 +105,34 @@
 <script lang="ts">
 import Vue from "vue";
 
+import { spotifyApi, ombdApi, fecApiKey, financialApi } from "@/api";
+
+const ombdApiKey: string = "52e10d22";
+
 export default Vue.extend({
   name: "HelloWorld",
   props: {
     msg: String
+  },
+  async created() {
+    const ombdResponse = await ombdApi.getOMDbSearch(
+      "json",
+      "Lego Movie",
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      { query: { apiKey: ombdApiKey } }
+    );
+    console.log(ombdResponse.data);
+
+    const debtsResponse = await financialApi.electionsGet(fecApiKey, 2020, 'president')
+    console.log(debtsResponse.data.results)
   }
 });
 </script>
