@@ -6,10 +6,10 @@ import { DefaultApi } from "@/api/spotify";
 export default Vue.extend({
   name: "Spotify",
   props: {
-      accessToken: {
-          type: String,
-          required: true
-      }
+    accessToken: {
+      type: String,
+      required: true
+    }
   },
   computed: {
     spotifyAuth(): string {
@@ -27,14 +27,14 @@ export default Vue.extend({
     }
   },
   async created() {
-      console.log(this.accessToken)
-      const spotifyApi = new DefaultApi({
-          baseOptions: {
-              headers: { Authorization: `Bearer ${this.accessToken}` }
-          }
-      })
-      const meResponse = await spotifyApi.meTracksGet(25)
-      console.log(meResponse.data.items)
+    console.log(this.accessToken);
+    const spotifyApi = new DefaultApi({
+      baseOptions: {
+        headers: { Authorization: `Bearer ${this.accessToken}` }
+      }
+    });
+    const meResponse = await spotifyApi.meTracksGet(25);
+    console.log(meResponse.data.items);
   }
 });
 </script>

@@ -8,7 +8,7 @@ export default Vue.extend({
   props: {
     accessToken: {
       type: String,
-      default: ''
+      default: ""
     }
   },
   components: { Spotify }

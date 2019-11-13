@@ -25,21 +25,21 @@ const routes = [
   }
 ];
 
-
 const router = new VueRouter({
   routes
 });
 
-
 router.beforeEach((to, from, next) => {
-  const accessTokenString = '/access_token='
+  const accessTokenString = "/access_token=";
   if (to.path.includes(accessTokenString)) {
-    const accessToken = to.path.match(new RegExp(accessTokenString + '(.*)&token_type'))?.[1] ?? ''
-    console.log('going to spotify', accessToken)
-    next({ name: 'spotify', params: { accessToken }})
+    const accessToken =
+      to.path.match(new RegExp(accessTokenString + "(.*)&token_type"))?.[1] ??
+      "";
+    console.log("going to spotify", accessToken);
+    next({ name: "spotify", params: { accessToken } });
   } else {
-    next()
+    next();
   }
-})
+});
 
 export default router;

@@ -1,8 +1,8 @@
-let httpsConfig = true
+let httpsConfig = true;
 
 module.exports = {
-	devServer: {
-		port: 8080,
-		host: 'localhost.jackkoppa.com'
-	}
-}
+  devServer: {
+    port: 8080,
+    host: "localhost.jackkoppa.com"
+  }
+};
