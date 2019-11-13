@@ -2,7 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/spotify">Spotify</router-link>
+      <router-link to="/spotify">Spotify</router-link> |
+      <router-link to="/custom">Custom API</router-link>
     </div>
     <router-view />
   </div>

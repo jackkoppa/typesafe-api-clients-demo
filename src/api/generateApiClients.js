@@ -9,9 +9,14 @@ const apiClients = [
     name: "omdb",
     spec: "https://any-api.com/openapi/omdbapi_com.1.openapi.json"
   },
+  // {
+  //   name: "fecgov",
+  //   spec: "https://any-api.com/openapi/fec_gov.1_0.openapi.json"
+  // },
   {
-    name: "fecgov",
-    spec: "https://any-api.com/openapi/fec_gov.1_0.openapi.json"
+    name: "custom",
+    //spec: "http://localhost:8080/v2/api-docs"
+    spec: "https://typesafe-api-demo-java.herokuapp.com/v2/api-docs"
   }
 ];
 

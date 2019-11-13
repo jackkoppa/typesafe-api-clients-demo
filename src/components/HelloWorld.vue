@@ -105,7 +105,7 @@
 <script lang="ts">
 import Vue from "vue";
 
-import { spotifyApi, ombdApi, fecApiKey, financialApi } from "@/api";
+import { spotifyApi, ombdApi } from "@/api";
 
 const ombdApiKey: string = "52e10d22";
 
@@ -130,9 +130,6 @@ export default Vue.extend({
       { query: { apiKey: ombdApiKey } }
     );
     console.log(ombdResponse.data);
-
-    const debtsResponse = await financialApi.electionsGet(fecApiKey, 2020, 'president')
-    console.log(debtsResponse.data.results)
   }
 });
 </script>

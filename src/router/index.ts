@@ -16,6 +16,12 @@ const routes = [
     props: true,
     component: () =>
       import(/* webpackChunkName: "spotify" */ "../views/Spotify.vue")
+  },
+  {
+    path: "/custom",
+    name: "custom",
+    component: () =>
+      import(/* webpackChunkName: "custom" */ "../views/Custom.vue")
   }
 ];
 
