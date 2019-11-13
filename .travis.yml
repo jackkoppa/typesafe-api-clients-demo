@@ -1,0 +1,17 @@
+#.travis.yml
+
+language: node_js
+node_js:
+  - "11"
+
+branches:
+  only:
+    - master
+
+script:
+  - if [ "$TRAVIS_PULL_REQUEST" = "true" ]; then npm run build; fi
+  - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then npm run deploy; fi
+
+notifications:
+  email:
+    on_failure: change
