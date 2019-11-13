@@ -39,6 +39,12 @@ export interface Candidate {
     firstName?: string;
     /**
      * 
+     * @type {number}
+     * @memberof Candidate
+     */
+    id?: number;
+    /**
+     * 
      * @type {string}
      * @memberof Candidate
      */
@@ -213,11 +219,11 @@ export const BasicErrorControllerApiAxiosParamCreator = function (configuration?
     return {
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingDELETE(options: any = {}): RequestArgs {
+        errorHtmlUsingDELETE(options: any = {}): RequestArgs {
             const localVarPath = `/error`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -242,11 +248,11 @@ export const BasicErrorControllerApiAxiosParamCreator = function (configuration?
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingGET(options: any = {}): RequestArgs {
+        errorHtmlUsingGET(options: any = {}): RequestArgs {
             const localVarPath = `/error`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -271,11 +277,11 @@ export const BasicErrorControllerApiAxiosParamCreator = function (configuration?
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingHEAD(options: any = {}): RequestArgs {
+        errorHtmlUsingHEAD(options: any = {}): RequestArgs {
             const localVarPath = `/error`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -300,11 +306,11 @@ export const BasicErrorControllerApiAxiosParamCreator = function (configuration?
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingOPTIONS(options: any = {}): RequestArgs {
+        errorHtmlUsingOPTIONS(options: any = {}): RequestArgs {
             const localVarPath = `/error`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -329,11 +335,11 @@ export const BasicErrorControllerApiAxiosParamCreator = function (configuration?
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingPATCH(options: any = {}): RequestArgs {
+        errorHtmlUsingPATCH(options: any = {}): RequestArgs {
             const localVarPath = `/error`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -358,11 +364,11 @@ export const BasicErrorControllerApiAxiosParamCreator = function (configuration?
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingPOST(options: any = {}): RequestArgs {
+        errorHtmlUsingPOST(options: any = {}): RequestArgs {
             const localVarPath = `/error`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -387,11 +393,11 @@ export const BasicErrorControllerApiAxiosParamCreator = function (configuration?
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingPUT(options: any = {}): RequestArgs {
+        errorHtmlUsingPUT(options: any = {}): RequestArgs {
             const localVarPath = `/error`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -425,12 +431,12 @@ export const BasicErrorControllerApiFp = function(configuration?: Configuration)
     return {
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingDELETE(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: object; }> {
-            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorUsingDELETE(options);
+        errorHtmlUsingDELETE(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ModelAndView> {
+            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorHtmlUsingDELETE(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -438,12 +444,12 @@ export const BasicErrorControllerApiFp = function(configuration?: Configuration)
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingGET(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: object; }> {
-            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorUsingGET(options);
+        errorHtmlUsingGET(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ModelAndView> {
+            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorHtmlUsingGET(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -451,12 +457,12 @@ export const BasicErrorControllerApiFp = function(configuration?: Configuration)
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingHEAD(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: object; }> {
-            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorUsingHEAD(options);
+        errorHtmlUsingHEAD(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ModelAndView> {
+            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorHtmlUsingHEAD(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -464,12 +470,12 @@ export const BasicErrorControllerApiFp = function(configuration?: Configuration)
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingOPTIONS(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: object; }> {
-            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorUsingOPTIONS(options);
+        errorHtmlUsingOPTIONS(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ModelAndView> {
+            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorHtmlUsingOPTIONS(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -477,12 +483,12 @@ export const BasicErrorControllerApiFp = function(configuration?: Configuration)
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingPATCH(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: object; }> {
-            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorUsingPATCH(options);
+        errorHtmlUsingPATCH(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ModelAndView> {
+            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorHtmlUsingPATCH(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -490,12 +496,12 @@ export const BasicErrorControllerApiFp = function(configuration?: Configuration)
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingPOST(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: object; }> {
-            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorUsingPOST(options);
+        errorHtmlUsingPOST(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ModelAndView> {
+            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorHtmlUsingPOST(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -503,12 +509,12 @@ export const BasicErrorControllerApiFp = function(configuration?: Configuration)
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingPUT(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<{ [key: string]: object; }> {
-            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorUsingPUT(options);
+        errorHtmlUsingPUT(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ModelAndView> {
+            const localVarAxiosArgs = BasicErrorControllerApiAxiosParamCreator(configuration).errorHtmlUsingPUT(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -525,66 +531,66 @@ export const BasicErrorControllerApiFactory = function (configuration?: Configur
     return {
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingDELETE(options?: any) {
-            return BasicErrorControllerApiFp(configuration).errorUsingDELETE(options)(axios, basePath);
+        errorHtmlUsingDELETE(options?: any) {
+            return BasicErrorControllerApiFp(configuration).errorHtmlUsingDELETE(options)(axios, basePath);
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingGET(options?: any) {
-            return BasicErrorControllerApiFp(configuration).errorUsingGET(options)(axios, basePath);
+        errorHtmlUsingGET(options?: any) {
+            return BasicErrorControllerApiFp(configuration).errorHtmlUsingGET(options)(axios, basePath);
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingHEAD(options?: any) {
-            return BasicErrorControllerApiFp(configuration).errorUsingHEAD(options)(axios, basePath);
+        errorHtmlUsingHEAD(options?: any) {
+            return BasicErrorControllerApiFp(configuration).errorHtmlUsingHEAD(options)(axios, basePath);
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingOPTIONS(options?: any) {
-            return BasicErrorControllerApiFp(configuration).errorUsingOPTIONS(options)(axios, basePath);
+        errorHtmlUsingOPTIONS(options?: any) {
+            return BasicErrorControllerApiFp(configuration).errorHtmlUsingOPTIONS(options)(axios, basePath);
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingPATCH(options?: any) {
-            return BasicErrorControllerApiFp(configuration).errorUsingPATCH(options)(axios, basePath);
+        errorHtmlUsingPATCH(options?: any) {
+            return BasicErrorControllerApiFp(configuration).errorHtmlUsingPATCH(options)(axios, basePath);
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingPOST(options?: any) {
-            return BasicErrorControllerApiFp(configuration).errorUsingPOST(options)(axios, basePath);
+        errorHtmlUsingPOST(options?: any) {
+            return BasicErrorControllerApiFp(configuration).errorHtmlUsingPOST(options)(axios, basePath);
         },
         /**
          * 
-         * @summary error
+         * @summary errorHtml
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        errorUsingPUT(options?: any) {
-            return BasicErrorControllerApiFp(configuration).errorUsingPUT(options)(axios, basePath);
+        errorHtmlUsingPUT(options?: any) {
+            return BasicErrorControllerApiFp(configuration).errorHtmlUsingPUT(options)(axios, basePath);
         },
     };
 };
@@ -598,79 +604,79 @@ export const BasicErrorControllerApiFactory = function (configuration?: Configur
 export class BasicErrorControllerApi extends BaseAPI {
     /**
      * 
-     * @summary error
+     * @summary errorHtml
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BasicErrorControllerApi
      */
-    public errorUsingDELETE(options?: any) {
-        return BasicErrorControllerApiFp(this.configuration).errorUsingDELETE(options)(this.axios, this.basePath);
+    public errorHtmlUsingDELETE(options?: any) {
+        return BasicErrorControllerApiFp(this.configuration).errorHtmlUsingDELETE(options)(this.axios, this.basePath);
     }
 
     /**
      * 
-     * @summary error
+     * @summary errorHtml
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BasicErrorControllerApi
      */
-    public errorUsingGET(options?: any) {
-        return BasicErrorControllerApiFp(this.configuration).errorUsingGET(options)(this.axios, this.basePath);
+    public errorHtmlUsingGET(options?: any) {
+        return BasicErrorControllerApiFp(this.configuration).errorHtmlUsingGET(options)(this.axios, this.basePath);
     }
 
     /**
      * 
-     * @summary error
+     * @summary errorHtml
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BasicErrorControllerApi
      */
-    public errorUsingHEAD(options?: any) {
-        return BasicErrorControllerApiFp(this.configuration).errorUsingHEAD(options)(this.axios, this.basePath);
+    public errorHtmlUsingHEAD(options?: any) {
+        return BasicErrorControllerApiFp(this.configuration).errorHtmlUsingHEAD(options)(this.axios, this.basePath);
     }
 
     /**
      * 
-     * @summary error
+     * @summary errorHtml
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BasicErrorControllerApi
      */
-    public errorUsingOPTIONS(options?: any) {
-        return BasicErrorControllerApiFp(this.configuration).errorUsingOPTIONS(options)(this.axios, this.basePath);
+    public errorHtmlUsingOPTIONS(options?: any) {
+        return BasicErrorControllerApiFp(this.configuration).errorHtmlUsingOPTIONS(options)(this.axios, this.basePath);
     }
 
     /**
      * 
-     * @summary error
+     * @summary errorHtml
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BasicErrorControllerApi
      */
-    public errorUsingPATCH(options?: any) {
-        return BasicErrorControllerApiFp(this.configuration).errorUsingPATCH(options)(this.axios, this.basePath);
+    public errorHtmlUsingPATCH(options?: any) {
+        return BasicErrorControllerApiFp(this.configuration).errorHtmlUsingPATCH(options)(this.axios, this.basePath);
     }
 
     /**
      * 
-     * @summary error
+     * @summary errorHtml
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BasicErrorControllerApi
      */
-    public errorUsingPOST(options?: any) {
-        return BasicErrorControllerApiFp(this.configuration).errorUsingPOST(options)(this.axios, this.basePath);
+    public errorHtmlUsingPOST(options?: any) {
+        return BasicErrorControllerApiFp(this.configuration).errorHtmlUsingPOST(options)(this.axios, this.basePath);
     }
 
     /**
      * 
-     * @summary error
+     * @summary errorHtml
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BasicErrorControllerApi
      */
-    public errorUsingPUT(options?: any) {
-        return BasicErrorControllerApiFp(this.configuration).errorUsingPUT(options)(this.axios, this.basePath);
+    public errorHtmlUsingPUT(options?: any) {
+        return BasicErrorControllerApiFp(this.configuration).errorHtmlUsingPUT(options)(this.axios, this.basePath);
     }
 
 }
@@ -689,10 +695,10 @@ export const CandidateControllerApiAxiosParamCreator = function (configuration?:
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addCandidateUsingPOST(candidate: Candidate, options: any = {}): RequestArgs {
+        addCandidate(candidate: Candidate, options: any = {}): RequestArgs {
             // verify required parameter 'candidate' is not null or undefined
             if (candidate === null || candidate === undefined) {
-                throw new RequiredError('candidate','Required parameter candidate was null or undefined when calling addCandidateUsingPOST.');
+                throw new RequiredError('candidate','Required parameter candidate was null or undefined when calling addCandidate.');
             }
             const localVarPath = `/candidate`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
@@ -722,11 +728,46 @@ export const CandidateControllerApiAxiosParamCreator = function (configuration?:
         },
         /**
          * 
+         * @summary deleteCandidate
+         * @param {number} id id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteCandidate(id: number, options: any = {}): RequestArgs {
+            // verify required parameter 'id' is not null or undefined
+            if (id === null || id === undefined) {
+                throw new RequiredError('id','Required parameter id was null or undefined when calling deleteCandidate.');
+            }
+            const localVarPath = `/candidate/{id}`
+                .replace(`{${"id"}}`, encodeURIComponent(String(id)));
+            const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
+
+            return {
+                url: globalImportUrl.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
          * @summary getCandidates
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCandidatesUsingGET(options: any = {}): RequestArgs {
+        getCandidates(options: any = {}): RequestArgs {
             const localVarPath = `/candidates`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -755,7 +796,7 @@ export const CandidateControllerApiAxiosParamCreator = function (configuration?:
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        indexUsingGET(options: any = {}): RequestArgs {
+        helloWorld(options: any = {}): RequestArgs {
             const localVarPath = `/`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
@@ -785,10 +826,10 @@ export const CandidateControllerApiAxiosParamCreator = function (configuration?:
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        searchForCandidatesByLastNameUsingGET(lastName: string, options: any = {}): RequestArgs {
+        searchForCandidatesByLastName(lastName: string, options: any = {}): RequestArgs {
             // verify required parameter 'lastName' is not null or undefined
             if (lastName === null || lastName === undefined) {
-                throw new RequiredError('lastName','Required parameter lastName was null or undefined when calling searchForCandidatesByLastNameUsingGET.');
+                throw new RequiredError('lastName','Required parameter lastName was null or undefined when calling searchForCandidatesByLastName.');
             }
             const localVarPath = `/candidates/{lastName}`
                 .replace(`{${"lastName"}}`, encodeURIComponent(String(lastName)));
@@ -829,8 +870,22 @@ export const CandidateControllerApiFp = function(configuration?: Configuration) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addCandidateUsingPOST(candidate: Candidate, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Candidate> {
-            const localVarAxiosArgs = CandidateControllerApiAxiosParamCreator(configuration).addCandidateUsingPOST(candidate, options);
+        addCandidate(candidate: Candidate, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Candidate> {
+            const localVarAxiosArgs = CandidateControllerApiAxiosParamCreator(configuration).addCandidate(candidate, options);
+            return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
+                const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
+                return axios.request(axiosRequestArgs);
+            };
+        },
+        /**
+         * 
+         * @summary deleteCandidate
+         * @param {number} id id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteCandidate(id: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<object> {
+            const localVarAxiosArgs = CandidateControllerApiAxiosParamCreator(configuration).deleteCandidate(id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -842,8 +897,8 @@ export const CandidateControllerApiFp = function(configuration?: Configuration) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCandidatesUsingGET(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Candidate>> {
-            const localVarAxiosArgs = CandidateControllerApiAxiosParamCreator(configuration).getCandidatesUsingGET(options);
+        getCandidates(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Candidate>> {
+            const localVarAxiosArgs = CandidateControllerApiAxiosParamCreator(configuration).getCandidates(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -855,8 +910,8 @@ export const CandidateControllerApiFp = function(configuration?: Configuration) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        indexUsingGET(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<string> {
-            const localVarAxiosArgs = CandidateControllerApiAxiosParamCreator(configuration).indexUsingGET(options);
+        helloWorld(options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<string> {
+            const localVarAxiosArgs = CandidateControllerApiAxiosParamCreator(configuration).helloWorld(options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -869,8 +924,8 @@ export const CandidateControllerApiFp = function(configuration?: Configuration) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        searchForCandidatesByLastNameUsingGET(lastName: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Candidate>> {
-            const localVarAxiosArgs = CandidateControllerApiAxiosParamCreator(configuration).searchForCandidatesByLastNameUsingGET(lastName, options);
+        searchForCandidatesByLastName(lastName: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Candidate>> {
+            const localVarAxiosArgs = CandidateControllerApiAxiosParamCreator(configuration).searchForCandidatesByLastName(lastName, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -892,8 +947,18 @@ export const CandidateControllerApiFactory = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        addCandidateUsingPOST(candidate: Candidate, options?: any) {
-            return CandidateControllerApiFp(configuration).addCandidateUsingPOST(candidate, options)(axios, basePath);
+        addCandidate(candidate: Candidate, options?: any) {
+            return CandidateControllerApiFp(configuration).addCandidate(candidate, options)(axios, basePath);
+        },
+        /**
+         * 
+         * @summary deleteCandidate
+         * @param {number} id id
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        deleteCandidate(id: number, options?: any) {
+            return CandidateControllerApiFp(configuration).deleteCandidate(id, options)(axios, basePath);
         },
         /**
          * 
@@ -901,8 +966,8 @@ export const CandidateControllerApiFactory = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCandidatesUsingGET(options?: any) {
-            return CandidateControllerApiFp(configuration).getCandidatesUsingGET(options)(axios, basePath);
+        getCandidates(options?: any) {
+            return CandidateControllerApiFp(configuration).getCandidates(options)(axios, basePath);
         },
         /**
          * 
@@ -910,8 +975,8 @@ export const CandidateControllerApiFactory = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        indexUsingGET(options?: any) {
-            return CandidateControllerApiFp(configuration).indexUsingGET(options)(axios, basePath);
+        helloWorld(options?: any) {
+            return CandidateControllerApiFp(configuration).helloWorld(options)(axios, basePath);
         },
         /**
          * 
@@ -920,8 +985,8 @@ export const CandidateControllerApiFactory = function (configuration?: Configura
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        searchForCandidatesByLastNameUsingGET(lastName: string, options?: any) {
-            return CandidateControllerApiFp(configuration).searchForCandidatesByLastNameUsingGET(lastName, options)(axios, basePath);
+        searchForCandidatesByLastName(lastName: string, options?: any) {
+            return CandidateControllerApiFp(configuration).searchForCandidatesByLastName(lastName, options)(axios, basePath);
         },
     };
 };
@@ -941,8 +1006,20 @@ export class CandidateControllerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CandidateControllerApi
      */
-    public addCandidateUsingPOST(candidate: Candidate, options?: any) {
-        return CandidateControllerApiFp(this.configuration).addCandidateUsingPOST(candidate, options)(this.axios, this.basePath);
+    public addCandidate(candidate: Candidate, options?: any) {
+        return CandidateControllerApiFp(this.configuration).addCandidate(candidate, options)(this.axios, this.basePath);
+    }
+
+    /**
+     * 
+     * @summary deleteCandidate
+     * @param {number} id id
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof CandidateControllerApi
+     */
+    public deleteCandidate(id: number, options?: any) {
+        return CandidateControllerApiFp(this.configuration).deleteCandidate(id, options)(this.axios, this.basePath);
     }
 
     /**
@@ -952,8 +1029,8 @@ export class CandidateControllerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CandidateControllerApi
      */
-    public getCandidatesUsingGET(options?: any) {
-        return CandidateControllerApiFp(this.configuration).getCandidatesUsingGET(options)(this.axios, this.basePath);
+    public getCandidates(options?: any) {
+        return CandidateControllerApiFp(this.configuration).getCandidates(options)(this.axios, this.basePath);
     }
 
     /**
@@ -963,8 +1040,8 @@ export class CandidateControllerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CandidateControllerApi
      */
-    public indexUsingGET(options?: any) {
-        return CandidateControllerApiFp(this.configuration).indexUsingGET(options)(this.axios, this.basePath);
+    public helloWorld(options?: any) {
+        return CandidateControllerApiFp(this.configuration).helloWorld(options)(this.axios, this.basePath);
     }
 
     /**
@@ -975,8 +1052,8 @@ export class CandidateControllerApi extends BaseAPI {
      * @throws {RequiredError}
      * @memberof CandidateControllerApi
      */
-    public searchForCandidatesByLastNameUsingGET(lastName: string, options?: any) {
-        return CandidateControllerApiFp(this.configuration).searchForCandidatesByLastNameUsingGET(lastName, options)(this.axios, this.basePath);
+    public searchForCandidatesByLastName(lastName: string, options?: any) {
+        return CandidateControllerApiFp(this.configuration).searchForCandidatesByLastName(lastName, options)(this.axios, this.basePath);
     }
 
 }

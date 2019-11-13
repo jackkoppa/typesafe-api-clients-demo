@@ -15,8 +15,8 @@ const apiClients = [
   // },
   {
     name: "custom",
-    //spec: "http://localhost:8080/v2/api-docs"
-    spec: "https://typesafe-api-demo-java.herokuapp.com/v2/api-docs"
+    spec: "http://localhost:8080/v2/api-docs"
+    //spec: "https://typesafe-api-demo-java.herokuapp.com/v2/api-docs"
   }
 ];
 

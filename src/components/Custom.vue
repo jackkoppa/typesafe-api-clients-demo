@@ -2,8 +2,8 @@
 import Vue from "vue";
 
 import { DefaultApi } from "@/api/spotify";
-import { customCandidateApi } from '../api';
-import { Candidate } from '../api/fecgov';
+import { customCandidateApi } from '@/api';
+import { Candidate, CandidatePartyEnum } from '@/api/custom';
 
 export default Vue.extend({
   name: "Spotify",
@@ -11,13 +11,18 @@ export default Vue.extend({
     return { candidates: [] as Candidate[] }
   },
   async created() {
-    try {
-      const candidatesResponse = await customCandidateApi.getCandidatesUsingGET()
+    await this.getCandidates()
+  },
+  methods: {
+    async deleteCandidate(id?: number) {
+      if (id != null) {
+        await customCandidateApi.deleteCandidate(id)
+        await this.getCandidates()
+      }
+    },
+    async getCandidates() {
+      const candidatesResponse = await customCandidateApi.getCandidates()
       this.candidates = candidatesResponse.data
-      console.log(candidatesResponse)
-
-    } catch (error) {
-      console.warn(error)
     }
   }
 });
@@ -28,26 +33,47 @@ export default Vue.extend({
     <section 
       v-for="candidate in candidates" 
       :key="`${candidate.firstName}-${candidate.lastName}`"
+      class="custom__candidate-card"
     >
+      <button @click="deleteCandidate(candidate.id)" class="custom__close-button">X</button>
       <h2>{{ candidate.firstName }} {{ candidate.lastName }}</h2>
+      <span :class="`custom__party custom__party--${candidate.party}`">{{ candidate.party }}</span>
+      <p>Polling @ {{ candidate.nationalPollingAverage }}%</p>
     </section>
   </div>
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.custom {
+  display: flex;
+
+  &__candidate-card {
+    box-shadow: 2px 2px 15px -4px #000;
+    padding: 15px;
+    margin: 15px;
+  }
+
+  &__close-button {
+    float: right;
+  }
+
+  &__party {
+    font-weight: 700;
+    font-size: 12px;
+    margin: 0;
+
+    &--DEMOCRAT {
+      color: blue;
+    }
+
+    &--REPUBLICAN {
+      color: red;
+    }
+
+    &--INDEPENDENT {
+      color: orange;
+    }
+  }
 }
 </style>
