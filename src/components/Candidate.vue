@@ -1,7 +1,6 @@
 <script lang="ts">
 import Vue from "vue";
 
-import { DefaultApi } from "@/api/spotify";
 import { candidateApi } from "@/api";
 import { Candidate, CandidatePartyEnum } from "@/api/candidate";
 import AddCandidate from "@/components/AddCandidate.vue";
