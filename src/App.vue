@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/spotify">Spotify</router-link> |
+      <router-link to="/movies">NYTimes Movie Reviews</router-link> |
       <router-link to="/candidate">Custom Candidate API</router-link>
     </div>
     <router-view />

@@ -11,11 +11,10 @@ const routes = [
     component: HomePage
   },
   {
-    path: "/spotify/:accessToken?",
-    name: "spotify",
-    props: true,
+    path: "/movies",
+    name: "movies",
     component: () =>
-      import(/* webpackChunkName: "spotifyPage" */ "../views/SpotifyPage.vue")
+      import(/* webpackChunkName: "moviesPage" */ "../views/MoviesPage.vue")
   },
   {
     path: "/candidate",
