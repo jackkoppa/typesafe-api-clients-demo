@@ -90,6 +90,7 @@ export default Vue.extend({
   &__search {
     flex: auto;
     padding: 15px;
+    font-size: 20px;
   }
   &__search-button {
     color: white;
