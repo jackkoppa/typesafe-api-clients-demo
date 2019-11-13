@@ -54,6 +54,8 @@ export default Vue.extend({
 <style scoped lang="scss">
 .custom {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   &__candidate-card {
     box-shadow: 2px 2px 15px -4px #000;
