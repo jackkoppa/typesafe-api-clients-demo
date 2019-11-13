@@ -105,10 +105,31 @@
 <script lang="ts">
 import Vue from "vue";
 
+import { spotifyApi, ombdApi } from "@/api";
+
+const ombdApiKey: string = "52e10d22";
+
 export default Vue.extend({
   name: "HelloWorld",
   props: {
     msg: String
+  },
+  async created() {
+    const ombdResponse = await ombdApi.getOMDbSearch(
+      "json",
+      "Lego Movie",
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      { query: { apiKey: ombdApiKey } }
+    );
+    console.log(ombdResponse.data);
   }
 });
 </script>
