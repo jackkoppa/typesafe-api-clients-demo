@@ -3,19 +3,25 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/spotify">Spotify</router-link> |
-      <router-link to="/custom">Custom API</router-link>
+      <router-link to="/candidate">Custom Candidate API</router-link>
     </div>
     <router-view />
   </div>
 </template>
 
 <style lang="scss">
-#app {
+#app,
+button {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+button {
+  border: none;
+  cursor: pointer;
 }
 
 #nav {

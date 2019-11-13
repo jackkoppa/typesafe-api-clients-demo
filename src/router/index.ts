@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import HomePage from "../views/HomePage.vue";
 
 Vue.use(VueRouter);
 
@@ -8,20 +8,22 @@ const routes = [
   {
     path: "/",
     name: "home",
-    component: Home
+    component: HomePage
   },
   {
     path: "/spotify/:accessToken?",
     name: "spotify",
     props: true,
     component: () =>
-      import(/* webpackChunkName: "spotify" */ "../views/Spotify.vue")
+      import(/* webpackChunkName: "spotifyPage" */ "../views/SpotifyPage.vue")
   },
   {
-    path: "/custom",
-    name: "custom",
+    path: "/candidate",
+    name: "candidate",
     component: () =>
-      import(/* webpackChunkName: "custom" */ "../views/Custom.vue")
+      import(
+        /* webpackChunkName: "candidatePage" */ "../views/CandidatePage.vue"
+      )
   }
 ];
 
