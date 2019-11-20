@@ -31,6 +31,18 @@ export default Vue.extend({
 
 <template>
   <div class="candidate">
+    <h4>
+      <em>
+        Note: This page makes calls to a demo, free-tier Heroku Spring Boot API
+        (<a href="https://github.com/jackkoppa/gs-spring-boot">repo</a>,
+        <a href="https://typesafe-api-demo-java.herokuapp.com/">deployment</a>),
+        with simple, dummy data.<br />
+        That API may be dormant at times, and require an initial call to
+        restart.<br />
+        Try loading this page once and, if you see no results initially, try
+        refreshing in a few minutes
+      </em>
+    </h4>
     <transition-group name="candidate-list" tag="ul" class="candidate-list">
       <li
         v-for="candidate in candidates"
