@@ -1,5 +1,10 @@
 const { execSync } = require("child_process");
 
+/**
+ * To try out additional APIs, search through available projects listed here:
+ * https://any-api.com/
+ * JSON Schema definitions can be found from the Netowrk tab when viewing each API
+ */
 const apiClients = [
   // Custom API created here: https://github.com/jackkoppa/gs-spring-boot
   {
@@ -14,24 +19,6 @@ const apiClients = [
     spec:
       "https://any-api.com/openapi/nytimes_com_movie_reviews.2_0_0.openapi.json"
   }
-
-  // Documentation for OAuth is not standardized, making it difficult to set accessToken
-  // {
-  //   name: "spotify",
-  //   spec: "https://any-api.com/openapi/spotify_com.v1.openapi.json"
-  // },
-
-  // Too much of a hassle to pass authentication apiKey in query, given improper documentation
-  // {
-  //   name: "omdb",
-  //   spec: "https://any-api.com/openapi/omdbapi_com.1.openapi.json"
-  // },
-
-  // Too large of a generated file, for now
-  // {
-  //   name: "fecgov",
-  //   spec: "https://any-api.com/openapi/fec_gov.1_0.openapi.json"
-  // },
 ];
 
 function generateApiClients() {

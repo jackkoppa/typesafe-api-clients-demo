@@ -16,4 +16,23 @@
 
 Let's learn about type-safe APIs! Please take a look at the code, code comments, & presentation slides. Then feel free to reach out with any & all questions to [`@JackPKoppa`](https://twitter.com/jackpkoppa); happy to continue to update this repo with further examples & documentation.
 
-View the app: http://typesafe-api-clients-demo.jackkoppa.github.io
+View the app: http://typesafe-api-clients-demo.jackkoppa.com
+
+## Local Development
+
+### Setup
+```
+npm install
+```
+
+### Compile and hot-reload for development
+```
+npm run serve
+```
+
+### Generate latest codegen files for TypeScript API Clients
+```
+npm run generate-api-clients
+```
+
+To try out additional OpenAPI/Swagger documented APIs, add them to `build > generateApiClients.js`, then re-run `npm run generate-api-clients`
